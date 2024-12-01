@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        main {
+            display: grid;
+
+
+        }
+
+        .cont {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: auto(repeat(auto-fit, minmax(200px, 1fr)));
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .cont img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 0;
+
+        }
+
+        #imageGrid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        #imageGrid img {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+
+        }
+
+
+        #imageGrid img.circular {
+            border-radius: 50%;
+        }
+
+
+        #imageGrid img.square {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+
+        #imageGrid img.portrait {
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+        }
+
+        .boton {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+        }
+
+
+        .boton button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+
+        }
+
+
+        .boton button:hover {
+            background-color: #45a049;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <article class="cont">
+            <div id="imageGrid">
+                <img src="https://preview.redd.it/jacj1y21iuj51.jpg?width=640&crop=smart&auto=webp&s=9745fc516f44e6e3a39504fd74bec31aab2f956a"
+                    alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxv9d-QNHCN2n2ccsmTeZpTdEiJK_oKlX4cw&s"
+                    alt="">
+                <img src="https://pbs.twimg.com/media/GD1S3PpW8AEE_kK.jpg" alt="">
+                <img src="https://i0.wp.com/interactiva.uvic.cat/bloc/wp-content/uploads/sites/2/2021/03/Eksf11vXYAER2KT.jpeg?fit=973%2C760&ssl=1"
+                    alt="">
+
+            </div>
+        </article>
+        <article>
+            <div class="boton">
+                <button id="two-columns">Grid de 2 columnas</button>
+                <button id="three-columns">Grid de 3 columnas variables</button>
+                <button id="circular">Circulares</button>
+                <button id="square">Cuadrado</button>
+                <button id="portrait">Retrato</button>
+            </div>
+        </article class="cont">
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
